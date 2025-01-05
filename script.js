@@ -74,7 +74,7 @@ function triggerConfettiWithSound() {
   playApplause();    // Play sound
 }
 
-// Automatic celebration after coloring 50% of the canvas
+// Automatic celebration after coloring 75% of the canvas
 function checkCanvasCompletion() {
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const pixels = imageData.data;
@@ -86,7 +86,7 @@ function checkCanvasCompletion() {
     }
   }
 
-  // If 50% of the canvas is colored, celebrate!
+  // If 75% of the canvas is colored, celebrate!
   if (coloredPixels > pixels.length / 8) {
     triggerConfettiWithSound();
   }
